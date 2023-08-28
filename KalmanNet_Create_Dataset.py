@@ -18,7 +18,8 @@ for nRdB, rdB in enumerate(R_decibel_train_ranges):
 
 
     # Filename for dataset
-    data_file_name = 'Datasets'+'\\'+ data_file_specification.format(ratio,rdB,T) + '.pt'
+    #data_file_name = 'Datasets'+'\\'+ data_file_specification.format(ratio,rdB,T) + '.pt'
+    data_file_name = 'KalmanNet-Dataset-main/Simulations/Linear_canonical/2x2_rq-1010_T100.pt'
 
     print('Training observation noise 1/R^2:',rdB,'[dB]')
     print('Training ratio:', ratio, '[dB]')
