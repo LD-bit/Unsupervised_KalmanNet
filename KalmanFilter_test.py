@@ -11,7 +11,7 @@ from torch.utils.data import DataLoader
 def KFTest(SysModel,test_dataset):
 
     # Since the KF is not optimized for Batches, it is best to compute on CPU
-    test_input = test_dataset.input.to( torch.device('cpu'))
+    test_input = test_dataset.input.to(torch.device('cpu'))
     test_target = test_dataset.target.to(torch.device('cpu'))
 
     # LOSS
@@ -47,6 +47,3 @@ def KFTest(SysModel,test_dataset):
     print("Kalman Filter Observation - MSE LOSS", MSE_KF_dB_avg_obs, '[dB]')
 
     return [MSE_KF_linear_arr, MSE_KF_linear_avg, MSE_KF_dB_avg,MSE_KF_dB_avg_obs]
-
-
-
