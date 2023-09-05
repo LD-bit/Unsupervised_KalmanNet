@@ -84,7 +84,7 @@ class KalmanNetNN(torch.nn.Module):
 
         ####################
         ### Hidden Layer ###
-        ####################
+        #################### 
         self.KG_l2 = torch.nn.Linear(self.hidden_dim, H2, bias=True).to(self.device,non_blocking = True)
 
         # ReLU (Rectified Linear Unit) Activation Function

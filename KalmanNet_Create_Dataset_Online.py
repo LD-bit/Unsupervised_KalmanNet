@@ -16,7 +16,7 @@ q = 10 ** ((ratio_data - rdB_data) / 20)
 
 
 # Filename for dataset
-data_file_name = 'Datasets'+'\\'+ data_file_specification.format(ratio_data,rdB_data,T_online) + '.pt'
+data_file_name = 'Datasets'+'/'+ data_file_specification.format(ratio_data,rdB_data,T_online) + '.pt'
 
 print('Training observation noise 1/R^2:',rdB_data,'[dB]')
 print('Training ratio:', ratio_data, '[dB]')

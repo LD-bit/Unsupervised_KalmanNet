@@ -19,7 +19,8 @@ print('Observation Noise pre-trained model 1/r^2:',rdB_pretrained,'[dB]')
 print('Ratio pre-trained model q^2/r^2:',ratio_pretrained,'[dB]')
 
 # Load Data
-data_file_name = 'Datasets'+'\\' + data_file_specification.format(ratio_data,rdB_data,T_online) + '.pt'
+data_file_name = 'Datasets'+'/' + data_file_specification.format(ratio_data,rdB_data,T_online) + '.pt'
+#data_file_name = 'KalmanNet-Dataset-main/Simulations/Linear_canonical/2x2_rq-1010_T100.pt'
 [train_dataset,cv_dataset,test_dataset] = DataLoader(data_file_name)
 
 print('Evaluate Correct Kalman Filter Performance:')
