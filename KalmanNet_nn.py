@@ -6,6 +6,10 @@ import torch.nn.functional as func
 import gc
 from KalmanNet_data import device
 
+global adict
+
+def save_my_cov(avect,amat):
+    return [avect,amat]
 
 class KalmanNetNN(torch.nn.Module):
 
@@ -226,7 +230,10 @@ class KalmanNetNN(torch.nn.Module):
         GRU_in = La1_out.reshape((self.batch_size,self.seq_len_input,self.input_dim))
         GRU_out, self.hn = self.rnn_GRU(GRU_in, self.hn)
         GRU_out_reshape = torch.reshape(GRU_out, (self.batch_size, self.hidden_dim))
-
+        
+        # print("=== Output from GRU layer 1 ===")
+        # print("GRU_out =",GRU_out,"\n GRU_out_reshape =",GRU_out_reshape)
+        
         ####################
         ### Hidden Layer ###
         ####################
